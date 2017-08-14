@@ -1,0 +1,96 @@
+﻿@model IEnumerable<NissanCartTest01.WebUi.Models.Service>
+
+@{
+    ViewBag.Title = "GetJobCardsRecall";
+    Layout = "~/Views/Shared/_Layout ST-3.cshtml";
+}
+<h2>GetJobCardsRecall</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StaffID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobCard.Vehicle.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobCard.Vehicle.RegId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobCard.Userfaults)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobCard.Techfaults)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Reason)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobCard.Progress)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobCard.Vehicle.Model)
+            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.JobCard.Vehicle.RegId)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobCard.Userfaults)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobCard.Techfaults)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reason)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobCard.Progress)
+            </td>
+            <td>
+                @Ajax.ActionLink("Possession", "CreateServiceCard",
+            new { id = item.JobCardId },
+            new AjaxOptions
+            {
+                HttpMethod = "POST",
+                OnBegin = "Begin",
+                OnComplete = "Complete",
+                OnFailure = "Failure"
+            }, new { @class = "btn btn-primary", @id = item.JobCardId })
+            </td>
+        </tr>
+    }
+</table>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script>
+    function Begin() {
+        $(this).text('Processing...');
+    }
+    function Complete() {
+        var $self = $(this);
+        $self.text('Done!');
+        var $id = $self.attr('id');
+        window.location.href = '/JobCard/GetJobCardDetails/' + $id;
+    }
+    function Failure() {
+        var $self = $(this);
+        $self.removeClass('btn-primary');
+        $self.addClass('btn-danger');
+        $self.text('Failed!');
+    }
+</script>

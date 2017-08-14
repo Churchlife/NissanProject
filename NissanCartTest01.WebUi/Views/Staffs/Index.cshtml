@@ -1,0 +1,65 @@
+﻿@model IEnumerable<NissanCartTest01.WebUi.Models.Staff>
+
+@{
+    ViewBag.Title = "Index";
+
+    Layout = "~/Views/Shared/_Layout MA.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@*<p>
+    @Html.ActionLink("Advisor Vew", "ManagerIndexSA", " Users")
+</p>
+<p>
+    @Html.ActionLink("Manager Vew", "ManagerIndex", " Users")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.username)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.username)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StaffId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.StaffId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.StaffId })
+        </td>
+    </tr>
+}
+
+</table>

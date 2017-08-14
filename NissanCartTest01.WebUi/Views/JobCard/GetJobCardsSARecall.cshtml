@@ -1,0 +1,70 @@
+﻿@model IEnumerable<NissanCartTest01.WebUi.Models.JobCard>
+
+@{
+    ViewBag.Title = "GetJobCardsSARecall";
+    Layout = "~/Views/Shared/_Layout SA Job6.cshtml";
+}
+
+
+<h2>GetJobCardsSARecall</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Foreman.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Staff.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vehicle.Make)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Techfaults)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Userfaults)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Possession)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Progress)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Foreman.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Staff.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vehicle.Make)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Techfaults)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Userfaults)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Possession)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Progress)
+        </td>
+    </tr>
+}
+
+</table>

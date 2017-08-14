@@ -1,0 +1,95 @@
+﻿@model IEnumerable<NissanCartTest01.WebUi.Models.JobCard>
+
+@{
+    ViewBag.Title = "GetJobCards";
+
+    Layout = "~/Views/Shared/_Layout ST.cshtml";
+}
+
+
+<h2>GetJobCards Service</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Staff.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vehicle.Make)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Techfaults)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Userfaults)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Possession)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Progress)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Staff.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vehicle.Make)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Techfaults)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Userfaults)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Possession)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Progress)
+            </td>
+            <td>
+                @Ajax.ActionLink("Possession", "CreateServiceCard",
+            new { id = item.JobCardId },
+            new AjaxOptions
+            {
+                HttpMethod = "POST",
+                OnBegin = "Begin",
+                OnComplete = "Complete",
+                OnFailure = "Failure"
+            }, new { @class = "btn btn-primary", @id = item.JobCardId })
+            </td>
+        </tr>
+    }
+</table>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script>
+    function Begin() {
+        $(this).text('Processing...');
+    }
+    function Complete() {
+        var $self = $(this);
+        $self.text('Done!');
+        var $id = $self.attr('id');
+        window.location.href = '/JobCard/GetJobCardDetails/' + $id;
+    }
+    function Failure() {
+        var $self = $(this);
+        $self.removeClass('btn-primary');
+        $self.addClass('btn-danger');
+        $self.text('Failed!');
+    }
+</script>

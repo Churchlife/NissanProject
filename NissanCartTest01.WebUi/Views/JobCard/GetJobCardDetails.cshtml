@@ -1,0 +1,92 @@
+﻿@using NissanCartTest01.WebUi.Models
+@model Tuple<JobCard, Service, IEnumerable<Comment>>
+
+@{
+    ViewBag.Title = "GetJobCardDetails";
+
+    Layout = "~/Views/Shared/_Layout ST.cshtml";
+}
+
+<h2>GetJobCardDetails</h2>
+<link href="~/Content/css/jquery-comments.css" rel="stylesheet" />
+
+<div>
+    <h4>JobCard</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item1.JobCardId)
+        </dt>
+        <dd class="jobcardid">
+            @Html.DisplayFor(Model => Model.Item1.JobCardId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(Model => Model.Item1.Progress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(Model => Model.Item1.Progress)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item1.RegId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(Model => Model.Item1.RegId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item1.Userfaults)
+        </dt>
+        <dd>
+            @Html.DisplayFor(Model => Model.Item1.Userfaults)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item1.Techfaults)
+        </dt>
+        <dd>
+            @Html.DisplayFor(Model => Model.Item1.Techfaults)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item2.StartTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(Model => Model.Item2.StartTime)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.Item2.Pass)
+        </dt>
+        <dd>
+            @Html.DisplayFor(Model => Model.Item2.Pass)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(Model => Model.Item2.EndTime)
+        </dt>
+        <dd>
+            @using (Html.BeginForm("SaveEndDate", "JobCard", new { id = Model.Item2.ServiceID }))
+            {
+                <input type="submit" value="Service Finish" class="btn btn-default" />
+            }
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.Item2.Reason)
+        </dt>
+        <dd>
+            @Html.DisplayFor(Model => Model.Item2.Reason)
+        </dd>*@
+
+    </dl>
+    <a href="javascript:window.print()">Click to Print This Page</a>
+</div>
+
+
+

@@ -1,0 +1,156 @@
+﻿@using NissanCartTest01.WebUi.Models
+@model Tuple<JobCard, Service, IEnumerable<Comment>>
+
+@{
+    ViewBag.Title = "GetJobCardDriveDetails";
+
+    Layout = "~/Views/Shared/_Layout SF.cshtml";
+}
+
+<h2>GetJobCardDetails</h2>
+<link href="~/Content/css/jquery-comments.css" rel="stylesheet" />
+
+<div>
+    <h4>JobCard</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item1.JobCardId)
+        </dt>
+        <dd class="jobcardid">
+            @Html.DisplayFor(Model => Model.Item1.JobCardId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(Model => Model.Item1.Progress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(Model => Model.Item1.Progress)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item1.RegId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(Model => Model.Item1.RegId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item1.Userfaults)
+        </dt>
+        <dd>
+            @Html.DisplayFor(Model => Model.Item1.Userfaults)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item1.Techfaults)
+        </dt>
+        <dd>
+            @Html.DisplayFor(Model => Model.Item1.Techfaults)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item2.StartTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(Model => Model.Item2.StartTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Item2.EndTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(Model => Model.Item2.EndTime)
+        </dd>
+        <dt>
+
+            @*@Html.DropDownListFor(model => model.Item2.Pass, passItems)
+                </dd>*@
+
+            @*<dt>
+                    @Html.DisplayNameFor(model => model.Item2.Reason)
+                </dt>
+                <dd>
+                    @Html.TextBoxFor(model => model.Item2.Reason, new { htmlAttributes = new { @class = "form-control" , @id = "reason" } })
+                    @Html.ValidationMessageFor(model => model.Item2.Reason, "", new { @class = "text-danger" })
+                </dd>*@
+
+            @*<dd>
+                    @Html.DisplayFor(Model => Model.Item2.Pass)
+                </dd>*@
+
+            @*<dt>
+                    @Html.DisplayNameFor(Model => Model.Item2.EndTime)
+                </dt>
+                <dd>
+                    @using (Html.BeginForm("SaveDriveDetails", "TestDriven", new { id = Model.Item2.ServiceID}))
+                    {
+                        <input type="submit" value="Service Finish" class="btn btn-default" />
+                    }
+                </dd>*@
+
+            @*<dt>
+                    @Html.DisplayNameFor(model => model.Item2.Reason)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(Model => Model.Item2.Reason)
+                </dd>*@
+
+    </dl>
+</div>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+<fieldset>
+    @using (Ajax.BeginForm("SaveDriveDetails", "TestDriven", new { id = Model.Item1.JobCardId },
+                                            new AjaxOptions
+                                            {
+                                                HttpMethod = "POST",
+                                                OnBegin = "Begin",
+                                                OnComplete = "Complete",
+                                                OnFailure = "Failure"
+                                            }))
+
+    {
+        <div>
+            <ul>
+                <li>
+                    @Html.Label("Pass")
+                    @Html.TextBox("txtPass")
+                </li>
+                <li>
+                    @Html.Label("Reason")
+                    @Html.TextArea("txtReason")
+                </li>
+            </ul>
+            <button>Complete</button>
+        </div>
+       
+    }
+
+</fieldset>
+<script>
+    function Begin() {
+        $(this).text('Processing...');
+    }
+    function Complete() {
+        var $self = $(this);
+        $self.text('Done!');
+        var $id = $self.attr('id');
+        window.location.href = '/TestDriven/GetJobDriveCards/';
+    }
+        function Failure() {
+            var $self = $(this);
+            $self.removeClass('btn-primary');
+            $self.addClass('btn-danger');
+            $self.text('Failed!');
+        }
+</script>
+
+
+
+
+

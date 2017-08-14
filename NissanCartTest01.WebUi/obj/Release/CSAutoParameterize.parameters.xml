@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-NissanCartTest01.WebUi-20170318115345.mdf;Initial Catalog=aspnet-NissanCartTest01.WebUi-20170318115345.mdf;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Sech\\Music\\FinalApp2\\NissanCartTest02\\NissanCartTest01\.WebUi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="NissanCart.Domain.Concrete.NissanContext-Web.config Connection String" description="NissanCart.Domain.Concrete.NissanContext Connection String used in web.config by the application to access the database." defaultValue="NissanCart.Domain.Concrete.NissanContext_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Sech\\Music\\FinalApp2\\NissanCartTest02\\NissanCartTest01\.WebUi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='NissanCart.Domain.Concrete.NissanContext']/@connectionString" />
+  </parameter>
+  <parameter name="NissanCartTest01.WebUi.Models.Nissan01Context-Web.config Connection String" description="NissanCartTest01.WebUi.Models.Nissan01Context Connection String used in web.config by the application to access the database." defaultValue="NissanCartTest01.WebUi.Models.Nissan01Context_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Sech\\Music\\FinalApp2\\NissanCartTest02\\NissanCartTest01\.WebUi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='NissanCartTest01.WebUi.Models.Nissan01Context']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnection_DatabasePublish-Web.config Connection String" description="DefaultConnection_DatabasePublish Connection String used in web.config by the application to access the database." defaultValue="DefaultConnection_DatabasePublish.ConnetionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Sech\\Music\\FinalApp2\\NissanCartTest02\\NissanCartTest01\.WebUi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection_DatabasePublish']/@connectionString" />
+  </parameter>
+</parameters>

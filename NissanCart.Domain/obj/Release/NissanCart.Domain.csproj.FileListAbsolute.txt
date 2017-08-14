@@ -1,0 +1,22 @@
+E:\NissanCartTest01\NissanCart.Domain\bin\Release\NissanCart.Domain.dll.config
+E:\NissanCartTest01\NissanCart.Domain\bin\Release\NissanCart.Domain.dll
+E:\NissanCartTest01\NissanCart.Domain\bin\Release\NissanCart.Domain.pdb
+E:\NissanCartTest01\NissanCart.Domain\bin\Release\EntityFramework.dll
+E:\NissanCartTest01\NissanCart.Domain\bin\Release\EntityFramework.SqlServer.dll
+E:\NissanCartTest01\NissanCart.Domain\bin\Release\EntityFramework.xml
+E:\NissanCartTest01\NissanCart.Domain\bin\Release\EntityFramework.SqlServer.xml
+E:\NissanCartTest01\NissanCart.Domain\obj\Release\NissanCart.Domain.csprojResolveAssemblyReference.cache
+E:\NissanCartTest01\NissanCart.Domain\obj\Release\NissanCart.Domain.dll
+E:\NissanCartTest01\NissanCart.Domain\obj\Release\NissanCart.Domain.pdb
+C:\Users\DS3 admin\Desktop\FinalApp2\NissanCartTest02\NissanCart.Domain\bin\Release\NissanCart.Domain.dll.config
+C:\Users\DS3 admin\Desktop\FinalApp2\NissanCartTest02\NissanCart.Domain\bin\Release\NissanCart.Domain.dll
+C:\Users\DS3 admin\Desktop\FinalApp2\NissanCartTest02\NissanCart.Domain\bin\Release\NissanCart.Domain.pdb
+C:\Users\DS3 admin\Desktop\FinalApp2\NissanCartTest02\NissanCart.Domain\bin\Release\DHTMLX.dll
+C:\Users\DS3 admin\Desktop\FinalApp2\NissanCartTest02\NissanCart.Domain\bin\Release\EntityFramework.dll
+C:\Users\DS3 admin\Desktop\FinalApp2\NissanCartTest02\NissanCart.Domain\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\DS3 admin\Desktop\FinalApp2\NissanCartTest02\NissanCart.Domain\bin\Release\DHTMLX.xml
+C:\Users\DS3 admin\Desktop\FinalApp2\NissanCartTest02\NissanCart.Domain\bin\Release\EntityFramework.xml
+C:\Users\DS3 admin\Desktop\FinalApp2\NissanCartTest02\NissanCart.Domain\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\DS3 admin\Desktop\FinalApp2\NissanCartTest02\NissanCart.Domain\obj\Release\NissanCart.Domain.csprojResolveAssemblyReference.cache
+C:\Users\DS3 admin\Desktop\FinalApp2\NissanCartTest02\NissanCart.Domain\obj\Release\NissanCart.Domain.dll
+C:\Users\DS3 admin\Desktop\FinalApp2\NissanCartTest02\NissanCart.Domain\obj\Release\NissanCart.Domain.pdb

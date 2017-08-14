@@ -1,0 +1,72 @@
+﻿@model NissanCartTest01.WebUi.Models.Customer
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Physical_Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Physical_Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Postal_Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Postal_Address)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "ManagerIndex";
+    Layout = "~/Views/Shared/_Layout MA.cshtml";
+}
+
+<h2>Manager</h2>
+<div class="row">
+    <div class="col-md-6 margin-top-20">
+        <a href="@Url.Action("Register","Account")" class="btn btn-primary btn-large btn-block">Add New User</a>
+    </div>
+
+    <div class="col-md-6 margin-top-20">
+        <a href="@Url.Action("List", "Sales")" class="btn btn-primary btn-large btn-block">Sales Reports</a>
+    </div>
+    <div class="col-md-6 margin-top-20">
+        <a href="@Url.Action("Create", "Staffs")" class="btn btn-primary btn-large btn-block">New Staff</a>
+    </div>
+    
+</div>
+
+

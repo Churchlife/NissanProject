@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NissanCart.Domain", "NissanCart.Domain\NissanCart.Domain.csproj", "{97402555-0D54-4AB2-8CE6-55288A0F48EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NissanCartTest01.WebUi", "NissanCartTest01.WebUi\NissanCartTest01.WebUi.csproj", "{4BCC98B8-6883-4BD9-99E5-412F0E0A94B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DDFAEBCB-611B-47A4-B5DF-6BB448B3FE09}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97402555-0D54-4AB2-8CE6-55288A0F48EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97402555-0D54-4AB2-8CE6-55288A0F48EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97402555-0D54-4AB2-8CE6-55288A0F48EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97402555-0D54-4AB2-8CE6-55288A0F48EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BCC98B8-6883-4BD9-99E5-412F0E0A94B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BCC98B8-6883-4BD9-99E5-412F0E0A94B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BCC98B8-6883-4BD9-99E5-412F0E0A94B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BCC98B8-6883-4BD9-99E5-412F0E0A94B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
